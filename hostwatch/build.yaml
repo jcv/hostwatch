@@ -1,8 +1,0 @@
-build_from:
-  amd64: python:3.12-alpine
-  aarch64: python:3.12-alpine
-labels:
-  org.opencontainers.image.title: Hostwatch
-  org.opencontainers.image.description: Fast host up/down monitor for Home Assistant over MQTT
-  org.opencontainers.image.source: https://github.com/jcv/hostwatch
-  org.opencontainers.image.licenses: MIT

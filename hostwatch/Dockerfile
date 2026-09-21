@@ -1,7 +1,9 @@
-ARG BUILD_FROM
-FROM ${BUILD_FROM}
+# Home Assistant runs this container's CMD directly (init: false in config.yaml),
+# so a plain Python base is enough — and unlike the bare HA base image it ships
+# pip. python:3.12-alpine is a multi-arch manifest, so this builds on amd64 and
+# aarch64 without a build.yaml / BUILD_FROM indirection.
+FROM python:3.12-alpine
 
-# paho-mqtt pinned to 1.x for the stable Client() API; icmplib for ICMP probing.
 RUN pip install --no-cache-dir "paho-mqtt<2.0" "icmplib>=3.0"
 
 COPY run.py /run.py

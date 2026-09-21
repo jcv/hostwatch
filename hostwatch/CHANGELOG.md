@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.1
+
+- Build from `python:3.12-alpine` directly instead of via `BUILD_FROM`/`build.yaml`;
+  the Supervisor was injecting the pip-less HA base image, breaking the build.
+
 ## 0.1.0
 
 - Initial release.

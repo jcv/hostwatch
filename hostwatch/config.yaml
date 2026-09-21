@@ -1,5 +1,5 @@
 name: Hostwatch
-version: "0.1.0"
+version: "0.1.1"
 slug: hostwatch
 description: Fast host up/down monitor — publishes connectivity sensors to HA via MQTT, in seconds, over ICMP or TCP.
 url: https://github.com/jcv/hostwatch/tree/main/hostwatch
