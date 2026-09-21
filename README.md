@@ -1,5 +1,7 @@
 # Hostwatch — Home Assistant add-on
 
+[![Add repository to your Home Assistant](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fjcv%2Fhostwatch)
+
 Fast host up/down monitoring for Home Assistant. Hostwatch probes your machines
 over **ICMP or TCP** every few seconds and publishes a `binary_sensor` (device
 class `connectivity`) per host via **MQTT discovery**, so a box sleeping,
@@ -20,8 +22,9 @@ minutes the built-in ping integration takes.
 
 ## Install
 
-1. In Home Assistant: **Settings → Add-ons → Add-on Store → ⋮ → Repositories**,
-   and add `https://github.com/jcv/hostwatch`.
+1. Click the button above, or in Home Assistant go to **Settings → Add-ons →
+   Add-on Store → ⋮ → Repositories** and add
+   `https://github.com/jcv/hostwatch`.
 2. Install **Hostwatch** from the store, add your hosts in the Configuration
    tab, and start it.
 
