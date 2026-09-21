@@ -1,0 +1,13 @@
+configuration:
+  interval:
+    name: Default check interval (seconds)
+    description: How often to probe each host, unless a host overrides it.
+  timeout:
+    name: Default timeout (seconds)
+    description: How long to wait for a probe to answer before marking a host down.
+  hosts:
+    name: Hosts
+    description: >-
+      The hosts to monitor. Each needs a name and address; method is icmp
+      (default) or tcp (set a port). interval and timeout are optional per-host
+      overrides.

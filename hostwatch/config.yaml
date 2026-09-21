@@ -1,0 +1,31 @@
+name: Hostwatch
+version: "0.1.0"
+slug: hostwatch
+description: Fast host up/down monitor — publishes connectivity sensors to HA via MQTT, in seconds, over ICMP or TCP.
+url: https://github.com/jcv/hostwatch/tree/main/hostwatch
+arch:
+  - amd64
+  - aarch64
+init: false
+startup: application
+boot: auto
+hassio_api: true
+services:
+  - mqtt:need
+options:
+  interval: 5
+  timeout: 2
+  hosts:
+    - name: Example host
+      host: 192.168.1.10
+      method: icmp
+schema:
+  interval: int(1,3600)
+  timeout: int(1,60)
+  hosts:
+    - name: str
+      host: str
+      method: list(icmp|tcp)
+      port: int(1,65535)?
+      interval: int(1,3600)?
+      timeout: int(1,60)?
